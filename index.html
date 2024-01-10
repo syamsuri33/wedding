@@ -1,5 +1,544 @@
-<head>
-<body>
-Hello World
-</body>
-</head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#BC8887" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pernikahan Sansan & Yeni</title>
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <!-- Bulma Version 0.8.x-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/bulma-tooltip@0.1.5/dist/bulma-tooltip.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/menikah.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.countdown.css" />
+    
+    <script
+      src="https://kit.fontawesome.com/2828f7885a.js"
+      integrity="sha384-WAsFbnLEQcpCk8lM1UTWesAf5rGTCvb2Y+8LvyjAAcxK1c3s5c0L+SYOgxvc6PWG"
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/jquery.coundown.js"></script>
+    <link rel="icon" type="image/png" href="image/favicon.png" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23064379-20"></script>
+    <!-- Begin Script for Countdown -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-23064379-20');
+    </script>
+    <!-- Begin Script for Countdown -->
+
+    <!-- Github Button -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </head>
+  
+<audio class="aud"id="audio" src="truelove.mp3" type="audio/mp3" preload="auto" controls ></audio>
+
+  <body>
+    <!-- Begin Preloader -->
+    <div class="preloader-wrapper">
+      <div class="preloader">
+        <img src="image/favicon.png" alt="Flower" />
+      </div>
+    </div>
+    <!-- End Preloader-->
+    <!-- Begin Header -->
+    <div class="header-wrapper" id="home">
+      <!-- Begin Hero -->
+      <section class="hero is-large">
+        <!-- Begin Mobile Nav -->
+        <nav class="navbar is-transparent is-hidden-desktop">
+          <!-- Begin Burger Menu -->
+          <div class="navbar-brand is-fixed-top">
+            <div class="navbar-burger burger" data-target="mobile-nav">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <!-- End Burger Menu -->
+          <div id="mobile-nav" class="navbar-menu">
+            <div class="navbar-end">
+              <div class="navbar-item">
+                <a class="navbar-item" href="#Waktu">
+                  Waktu
+                </a>
+              </div>
+              <div class="navbar-item">
+                <a class="navbar-item" href="#lokasi">
+                  Lokasi
+                </a>
+              </div>
+              
+              <div class="navbar-item">
+                <a class="navbar-item" href="#rsvp">
+                  Rsvp
+                </a>
+              </div>
+              <div class="navbar-item">
+                <a class="navbar-item" href="#gift">
+                  Gift
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- End Mobile Nav -->
+        <!-- Begin Hero Content-->
+        <div class="hero-body">
+          <div class="container has-text-centered">
+            
+<h1 class="Untuk" id="dynamic-h1">Untuk Fulan</h1>
+            <h1 class="subtitle">Undangan Pernikahan</h1>
+            <h2 class="title">Sansan<br>&<br>Yeni</h2>
+            
+
+<button class="button is-rounded is-primary btnbuka" onclick="playAudio()">
+  <span class="icon">
+    <i class="fas fa-envelope"></i>
+  </span>
+  <span>Buka undangan</span>
+</button>
+
+          </div>
+
+        
+          <!-- Start Countdown -->       
+          <div>
+            <ul id="hitungmundur" >
+              <li><span class="days">00</span><p class="days_text">Hari</p></li>
+              <li class="separator">:</li>
+              <li><span class="hours">00</span><p class="hours_text">Jam</p></li>
+              <li class="separator">:</li>
+              <li><span class="minutes">00</span><p class="minutes_text">Menit</p></li>
+              <li class="separator">:</li>
+              <li><span class="seconds">00</span><p class="seconds_text">Detik</p></li>
+            </ul>
+            <div class="spasi">
+            </div>
+            <script type="text/javascript">
+              var now = new Date();
+              var day = now.getDate();
+              var month = now.getMonth() + 1;
+              var year = now.getFullYear() + 1;
+          
+              var nextyear = month + '/' + day + '/' + year + ' 07:07:07';
+              var harih = '12/23/2023 08:00:00';
+
+              $('#hitungmundur').countdown({
+                date: harih, // TODO Date format: 07/27/2017 17:00:00
+                offset: +7, // TODO Your Timezone Offset
+                day: 'Hari',
+                days: 'Hari'
+              }, function () {
+                alert('Done!');
+              });
+            </script>  
+            <span class="space40px"></span>
+          </div>
+
+
+          <!-- End Countdown -->
+        </div>
+        <!-- End Hero Content-->
+        <!-- Begin Hero Menu -->
+        <div class="hero-foot ">
+          <div class="hero-foot--wrapper">
+            <div class="columns">
+              <div class="column is-12 hero-menu-desktop has-text-centered">
+                <ul>
+                  <li class="is-active">
+                    <a href="#home">Home</a>
+                  </li>
+                  <li>
+                    <a href="#Waktu">Waktu</a>
+                  </li>
+                  <li>
+                    <a href="#lokasi">Lokasi</a>
+                  </li>
+                  <li>
+                    <a href="#rsvp">Rsvp</a>
+                  </li>
+
+                  <li>
+                    <a href="#gift">Gift</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Hero Menu -->
+      </section>
+      <!-- End Hero -->
+    </div>
+    <!-- End Header -->
+
+    <!-- Begin Main Content -->
+    <div class="main-content">
+    <!-- Begin regular-section-->
+     <section class="section-light no-padding-top regular-section has-text-centered has-vertically-aligned-content" id="regular-section">
+        
+        <div data-aos="fade-up" data-aos-easing="linear">
+          <img src="image/bismillah.png" class="bismillah has-text-centered" alt="Bismillahirrahmaanirrahiim">
+        </div>
+
+        <p class="bodytext" data-aos="fade-up" data-aos-easing="linear">
+          Assalamu'alaikum Warahmatullahi Wabarakatuh.
+          <br />
+          Dengan memohon rahmat dan ridha Allah swt, 
+          <br />
+          kami bermaksud mengundang Bapak/Ibu/Saudara/Saudari pada acara pernikahan kami
+        </p>
+
+        <span class="space40px"></span>
+        <span class="space40px"></span>
+
+        <div data-aos="fade-up" data-aos-easing="linear">
+          <div class="nama-lengkap" >
+           Sansan Yanuar Prawiradisastra 
+          </div>
+          <div class="ampersand">&</div>
+          <div class="nama-lengkap">
+          Yeni Hernawati S.Ak
+          </div>
+           
+        </div>
+        <span class="space40px"></span>
+        <div data-aos="fade-up" data-aos-easing="linear">
+          <img src="image/divider-leaves.png" class="divider has-text-centered" alt="~~~">
+        </div>
+        <span class="space40px"></span>
+        <span class="space40px"></span>
+      </section>
+      <!-- End regular-section-->    
+      
+      <!-- Begin Waktu Section -->
+      <section class="section-dark" id="Waktu">
+        <div class="container">
+
+          <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
+            <h1 class="title has-text-centered section-title">Waktu</h1>
+          </div>
+          <div class="columns is-multiline" data-aos="fade-up" data-aos-easing="linear">
+            <div
+              class="column is-4 has-vertically-aligned-content">
+            
+              <p class="is-larger has-text-centered">
+                  <div class="waktu tanggal-hari has-text-centered">Sabtu</div> 
+                  <div class="waktu tanggal-angka has-text-centered">23</div>
+                  <div class="waktu tanggal-bulan has-text-centered">Desember 2023</div>
+              </p>
+            
+            </div>
+            <div class="column is-4 has-vertically-aligned-content">
+            
+              <p class="waktu is-larger has-text-centered">
+                Akad Nikah:
+                <br>
+                <strong>09.00 WIB - Selsai</strong>
+              </p>
+            
+            </div>
+
+            <div class="column is-4 has-vertically-aligned-content">
+              
+              <h1 class="waktu is-larger has-text-centered">
+                walimatul ursy:
+                <br>
+                <strong>11.00 - 15.00 WIB</strong>
+              </h1>
+              
+              
+            </div>
+
+          </div>
+        </div>
+        <div class="space40px"></div>
+        <div class="main-content has-text-centered" data-aos="fade-up" data-aos-easing="linear">
+          <a href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=NGgzdW00NG84dXFwMzcwNXYxbGliNGxzaWggZGFlbmdkb2FuZ0Bt&amp;tmsrc=daengdoang%40gmail.com" target="_blank" class="button has-tooltip btn-cta" data-tooltip="Add to Calendar" target="_blank" data-aos="zoom-in">
+            <i class="far fa-calendar-plus"></i>
+            &nbsp;&nbsp;Google Calendar
+          </a>
+        </div>
+      </section>
+      <!-- End Waktu Content -->
+
+      <!-- Begin Lokasi Section -->
+      <section class="section-darker" id="lokasi" >
+        <div class="container">
+          <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
+            <h1 class="title has-text-centered section-title">Lokasi</h1>
+            <p class="tempat is-larger has-text-centered">
+              <strong>Kediaman Mempelai Wanita</strong>
+              <br>
+               JL. Pangeran Santri No.99, RT.001/RW.012,Kotakulon, 
+              <br>
+              Kec. Sumedang Selatan, Kab Sumedang, Jawa Barat
+              <br>
+            </p>
+          </div>
+          <div class="section-map" data-aos="fade-up" data-aos-easing="linear">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3054.5813387462913!2d107.91948579728285!3d-6.854370255863216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68d13d7f590c21%3A0xaf8f4e746dfa25a7!2sJl.%20Pangeran%20Santri%20No.99%2C%20Kotakulon%2C%20Kec.%20Sumedang%20Sel.%2C%20Kabupaten%20Sumedang%2C%20Jawa%20Barat%2045311!5e0!3m2!1sen!2sid!4v1701337264358!5m2!1sen!2sid" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          </div>
+          <div class="space40px"></div>
+          <div class="has-text-centered" data-aos="fade-up" data-aos-easing="linear">
+            <a href="https://www.google.com/maps/dir//Jl.+Pangeran+Santri+No.99,+Kotakulon,+Sumedang+Regency,+West+Java/@-6.8543874,107.9180229,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x2e68d13d7f590c21:0xaf8f4e746dfa25a7!2m2!1d107.9205978!2d-6.8543874?hl=en&entry=ttu" class="button btn-cta" target="_blank" data-aos="zoom-in">
+              <i class="far fa-directions"></i>
+              &nbsp;&nbsp;Google Maps
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- End Lokasi Content -->
+
+      <!-- Begin rsvp -->
+      
+<section class="section-light regular-section is-fullheight" id="rsvp">
+  <div class="container">
+    <div class="columns is-multiline">  
+      <div class="column has-text-centered is-12 prolog">
+        <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">Konfirmasi Kehadiran</h1>
+        <div class="column is-12 prolog has-text-centered" data-aos="fade-up" data-aos-easing="linear">
+         <div class="custom-card">
+              <p class="h2 subtitle">
+                Merupakan suatu kehormatan dan kebahagiaan bagi kami
+                <br>
+                apabila Bapak/Ibu/Saudara/Saudari berkenan hadir
+                memberikan doa restu.
+                <br>
+                <br>
+                Jika bisa hadir kami tunggu konfirmasinya,
+                <br>
+                <br>
+                Jika tidak memungkinkan untuk hadir di pernikahan kami, tidak mengapa,
+                <br>
+                semoga bisa berjumpa di lain kesempatan
+                <br>
+                <br>
+                Stay safe & jaga kesehatan ya :)
+              </p>
+              <div class="space24px"></div>
+              <div data-aos="fade-up" data-aos-easing="linear">
+                <img src="image/divider-leaves.png" class="divider has-text-centered" alt="~~~">
+              </div>
+              <div class="space24px"></div>
+            </div>
+
+        <form class="rsvp-form" id="my-form">
+          <div class="field">
+            <label class="label">Nama</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Masukkan Nama" name="nama">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Jumlah</label>
+            <div class="control">
+              <input class="input" type="number" placeholder="Masukkan Jumlah" name="jumlah" min="1" max="5" value="1">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Konfirmasi</label>
+            <div class="control">
+              <div class="select">
+                <select name="status">
+                  <option selected>Pilih salah satu</option>
+                  <option value="Hadir">Hadir</option>
+                  <option value="Tidak Hadir">Tidak Hadir</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="control">
+              <button class="button is-rounded kirim" type="submit">Kirim</button>
+            </div>
+          </div>
+        </form>
+        
+          <div class="space40px"></div>
+
+      </div>
+    </div>
+  </div>
+</section>
+      <!-- End rsvp -->
+
+      <!-- Begin gift Content -->
+      <section class="section-dark" id="gift">
+        <div class="container">
+       
+          <div class="columns is-multiline">
+            <div class="column is-12 prolog">
+              <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">Kirim Hadiah</h1>
+              <div class="card">
+                <div class="card-content has-text-centered">
+                  <h1 class="title is-size-5">Sansan Yanuar Prawira Disastra</h1>
+                   <h1 class="subtitle is-size-5">BCA 7771893213</h1>
+                  <div class="buttons is-centered">
+                    <button class="button is-rounded" onclick="copyText('7771893213')">Copy No Rekening</button>
+                  </div>
+                    
+                       <h1 class="title is-size-5">Yeni Hernawati</h1>
+                         <h1 class="subtitle is-size-5">BCA 3790739417</h1>
+                         <div class="buttons is-centered"></div>
+                    <button class="button is-rounded" onclick="copyText('3790739417')">Copy No Rekening</button>
+                         </div>
+                </div>
+              </div>
+      
+              <div class="space40px"></div>
+              <div data-aos="fade-up" data-aos-easing="linear">
+                <img src="image/divider-leaves.png" class="divider has-text-centered" alt="~~~">
+              </div>
+              <div class="space40px"></div>
+              <p class="h2 subtitle has-text-centered" data-aos="fade-up" data-aos-easing="linear">
+                Kami yang berbahagia,
+                <br>
+                <a class="instagram" : href="https://instagram.com/sansan.yanuar" target="_blank" alt="Instagram Sansan">
+                  <i class="fab fa-instagram"></i> @sansan.yanuar
+                </a>
+                &nbsp
+                <a class="instagram" href="https://instagram.com/yenniherna_" target="_blank" alt="Instagram Yeni">
+                  <i class="fab fa-instagram"></i> @yenniherna_
+                </a>
+              </p>
+            </div>
+      
+      
+          </div>
+      
+        </div>
+        </div>
+      </section>
+      <!-- End gift Content -->
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Begin Footer -->
+    <div class="footer">
+      <div class="container">
+          <p class="has-vertically-align">2023 &copy Sansan Yanuar Prawiradisastra</p>
+      </div>
+    </div>
+    <!-- End Footer -->
+
+    <!-- Scripts -->
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const form = document.getElementById('my-form');
+        form.addEventListener("submit", function(e) {
+          e.preventDefault();
+          const formData = new FormData(form);
+          const action = e.target.action;
+          fetch(action, {
+              method: 'POST',
+              body: formData,
+            })
+            .then(() => {
+              alert("Konfirmasi kehadiran berhasil terkirim!");
+            })
+            .catch(error => console.error('Error:', error));
+        });
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/menikah.js"></script>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    
+    <script>
+      AOS.init({
+        easing: "ease-out",
+        duration: 800,
+      });
+    </script>
+
+<script>
+  function copyText(text) {
+    navigator.clipboard.writeText(text).then(function() {
+      console.log('Text berhasil disalin: ' + text);
+    }).catch(function(err) {
+      console.error('Gagal menyalin teks: ', err);
+    });
+  }
+  
+</script>
+
+<script>
+  // Fungsi untuk memutar audio dan mengarahkan pengguna ke #regular-section
+  function playAudio() {
+    var audio = document.getElementById("audio");
+    audio.play();
+
+    // Mengatur kecepatan scroll dengan animasi
+    var targetSection = document.getElementById("regular-section");
+    var targetPosition = targetSection.offsetTop;
+    var currentPosition = window.scrollY;
+    var distance = targetPosition - currentPosition;
+    var duration = 2000; // Durasi animasi dalam milidetik (1 detik = 1000 milidetik)
+    var start = null;
+
+    function step(timestamp) {
+      if (!start) start = timestamp;
+      var progress = timestamp - start;
+      window.scrollTo(0, easeInOut(progress, currentPosition, distance, duration));
+
+      if (progress < duration) {
+        requestAnimationFrame(step);
+      }
+    }
+
+    // Fungsi untuk menggambarkan pola percepatan-easeInOut
+    function easeInOut(t, b, c, d) {
+      t /= d / 2;
+      if (t < 1) return c / 2 * t * t + b;
+      t--;
+      return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(step);
+    
+    
+  }
+</script>
+
+
+
+<script>
+  // Fungsi untuk mendapatkan nilai parameter dari URL
+  function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+
+  // Mendapatkan nilai parameter 'text' dari URL
+  var textParam = getParameterByName('text');
+
+  // Memperbarui h1 jika parameter 'text' ditemukan
+  if (textParam) {
+    var dynamicH1 = document.getElementById('dynamic-h1');
+    dynamicH1.textContent = textParam;
+  }
+</script>
+
+
+
+  </body>
+</html>
