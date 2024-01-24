@@ -1,544 +1,542 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="theme-color" content="#BC8887" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Pernikahan Sansan & Yeni</title>
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <!-- Bulma Version 0.8.x-->
-    <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/bulma-tooltip@0.1.5/dist/bulma-tooltip.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/menikah.css" />
-    <link rel="stylesheet" type="text/css" href="css/jquery.countdown.css" />
-    
-    <script
-      src="https://kit.fontawesome.com/2828f7885a.js"
-      integrity="sha384-WAsFbnLEQcpCk8lM1UTWesAf5rGTCvb2Y+8LvyjAAcxK1c3s5c0L+SYOgxvc6PWG"
-      crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="js/jquery.coundown.js"></script>
-    <link rel="icon" type="image/png" href="image/favicon.png" />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23064379-20"></script>
-    <!-- Begin Script for Countdown -->
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'UA-23064379-20');
-    </script>
-    <!-- Begin Script for Countdown -->
+<head>
+    <meta charset="utf-8">
+    <title>Imam & Gea</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+	
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
 
-    <!-- Github Button -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-  </head>
-  
-<audio class="aud"id="audio" src="truelove.mp3" type="audio/mp3" preload="auto" controls ></audio>
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet"> 
 
-  <body>
-    <!-- Begin Preloader -->
-    <div class="preloader-wrapper">
-      <div class="preloader">
-        <img src="image/favicon.png" alt="Flower" />
-      </div>
-    </div>
-    <!-- End Preloader-->
-    <!-- Begin Header -->
-    <div class="header-wrapper" id="home">
-      <!-- Begin Hero -->
-      <section class="hero is-large">
-        <!-- Begin Mobile Nav -->
-        <nav class="navbar is-transparent is-hidden-desktop">
-          <!-- Begin Burger Menu -->
-          <div class="navbar-brand is-fixed-top">
-            <div class="navbar-burger burger" data-target="mobile-nav">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-          <!-- End Burger Menu -->
-          <div id="mobile-nav" class="navbar-menu">
-            <div class="navbar-end">
-              <div class="navbar-item">
-                <a class="navbar-item" href="#Waktu">
-                  Waktu
-                </a>
-              </div>
-              <div class="navbar-item">
-                <a class="navbar-item" href="#lokasi">
-                  Lokasi
-                </a>
-              </div>
-              
-              <div class="navbar-item">
-                <a class="navbar-item" href="#rsvp">
-                  Rsvp
-                </a>
-              </div>
-              <div class="navbar-item">
-                <a class="navbar-item" href="#gift">
-                  Gift
-                </a>
-              </div>
-            </div>
-          </div>
-        </nav>
-        <!-- End Mobile Nav -->
-        <!-- Begin Hero Content-->
-        <div class="hero-body">
-          <div class="container has-text-centered">
-            
-<h1 class="Untuk" id="dynamic-h1">Untuk Fulan</h1>
-            <h1 class="subtitle">Undangan Pernikahan</h1>
-            <h2 class="title">Sansan<br>&<br>Yeni</h2>
-            
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
-<button class="button is-rounded is-primary btnbuka" onclick="playAudio()">
-  <span class="icon">
-    <i class="fas fa-envelope"></i>
-  </span>
-  <span>Buka undangan</span>
-</button>
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
-          </div>
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/welcomescreen.css" rel="stylesheet">
+	
+	<link href="css/edit.css" rel="stylesheet">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
 
-        
-          <!-- Start Countdown -->       
-          <div>
-            <ul id="hitungmundur" >
-              <li><span class="days">00</span><p class="days_text">Hari</p></li>
-              <li class="separator">:</li>
-              <li><span class="hours">00</span><p class="hours_text">Jam</p></li>
-              <li class="separator">:</li>
-              <li><span class="minutes">00</span><p class="minutes_text">Menit</p></li>
-              <li class="separator">:</li>
-              <li><span class="seconds">00</span><p class="seconds_text">Detik</p></li>
-            </ul>
-            <div class="spasi">
-            </div>
-            <script type="text/javascript">
-              var now = new Date();
-              var day = now.getDate();
-              var month = now.getMonth() + 1;
-              var year = now.getFullYear() + 1;
-          
-              var nextyear = month + '/' + day + '/' + year + ' 07:07:07';
-              var harih = '12/23/2023 08:00:00';
-
-              $('#hitungmundur').countdown({
-                date: harih, // TODO Date format: 07/27/2017 17:00:00
-                offset: +7, // TODO Your Timezone Offset
-                day: 'Hari',
-                days: 'Hari'
-              }, function () {
-                alert('Done!');
-              });
-            </script>  
-            <span class="space40px"></span>
-          </div>
-
-
-          <!-- End Countdown -->
-        </div>
-        <!-- End Hero Content-->
-        <!-- Begin Hero Menu -->
-        <div class="hero-foot ">
-          <div class="hero-foot--wrapper">
-            <div class="columns">
-              <div class="column is-12 hero-menu-desktop has-text-centered">
-                <ul>
-                  <li class="is-active">
-                    <a href="#home">Home</a>
-                  </li>
-                  <li>
-                    <a href="#Waktu">Waktu</a>
-                  </li>
-                  <li>
-                    <a href="#lokasi">Lokasi</a>
-                  </li>
-                  <li>
-                    <a href="#rsvp">Rsvp</a>
-                  </li>
-
-                  <li>
-                    <a href="#gift">Gift</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End Hero Menu -->
-      </section>
-      <!-- End Hero -->
-    </div>
-    <!-- End Header -->
-
-    <!-- Begin Main Content -->
-    <div class="main-content">
-    <!-- Begin regular-section-->
-     <section class="section-light no-padding-top regular-section has-text-centered has-vertically-aligned-content" id="regular-section">
-        
-        <div data-aos="fade-up" data-aos-easing="linear">
-          <img src="image/bismillah.png" class="bismillah has-text-centered" alt="Bismillahirrahmaanirrahiim">
-        </div>
-
-        <p class="bodytext" data-aos="fade-up" data-aos-easing="linear">
-          Assalamu'alaikum Warahmatullahi Wabarakatuh.
-          <br />
-          Dengan memohon rahmat dan ridha Allah swt, 
-          <br />
-          kami bermaksud mengundang Bapak/Ibu/Saudara/Saudari pada acara pernikahan kami
-        </p>
-
-        <span class="space40px"></span>
-        <span class="space40px"></span>
-
-        <div data-aos="fade-up" data-aos-easing="linear">
-          <div class="nama-lengkap" >
-           Sansan Yanuar Prawiradisastra 
-          </div>
-          <div class="ampersand">&</div>
-          <div class="nama-lengkap">
-          Yeni Hernawati S.Ak
-          </div>
-           
-        </div>
-        <span class="space40px"></span>
-        <div data-aos="fade-up" data-aos-easing="linear">
-          <img src="image/divider-leaves.png" class="divider has-text-centered" alt="~~~">
-        </div>
-        <span class="space40px"></span>
-        <span class="space40px"></span>
-      </section>
-      <!-- End regular-section-->    
-      
-      <!-- Begin Waktu Section -->
-      <section class="section-dark" id="Waktu">
-        <div class="container">
-
-          <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
-            <h1 class="title has-text-centered section-title">Waktu</h1>
-          </div>
-          <div class="columns is-multiline" data-aos="fade-up" data-aos-easing="linear">
-            <div
-              class="column is-4 has-vertically-aligned-content">
-            
-              <p class="is-larger has-text-centered">
-                  <div class="waktu tanggal-hari has-text-centered">Sabtu</div> 
-                  <div class="waktu tanggal-angka has-text-centered">23</div>
-                  <div class="waktu tanggal-bulan has-text-centered">Desember 2023</div>
-              </p>
-            
-            </div>
-            <div class="column is-4 has-vertically-aligned-content">
-            
-              <p class="waktu is-larger has-text-centered">
-                Akad Nikah:
-                <br>
-                <strong>09.00 WIB - Selsai</strong>
-              </p>
-            
-            </div>
-
-            <div class="column is-4 has-vertically-aligned-content">
-              
-              <h1 class="waktu is-larger has-text-centered">
-                walimatul ursy:
-                <br>
-                <strong>11.00 - 15.00 WIB</strong>
-              </h1>
-              
-              
-            </div>
-
-          </div>
-        </div>
-        <div class="space40px"></div>
-        <div class="main-content has-text-centered" data-aos="fade-up" data-aos-easing="linear">
-          <a href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=NGgzdW00NG84dXFwMzcwNXYxbGliNGxzaWggZGFlbmdkb2FuZ0Bt&amp;tmsrc=daengdoang%40gmail.com" target="_blank" class="button has-tooltip btn-cta" data-tooltip="Add to Calendar" target="_blank" data-aos="zoom-in">
-            <i class="far fa-calendar-plus"></i>
-            &nbsp;&nbsp;Google Calendar
-          </a>
-        </div>
-      </section>
-      <!-- End Waktu Content -->
-
-      <!-- Begin Lokasi Section -->
-      <section class="section-darker" id="lokasi" >
-        <div class="container">
-          <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
-            <h1 class="title has-text-centered section-title">Lokasi</h1>
-            <p class="tempat is-larger has-text-centered">
-              <strong>Kediaman Mempelai Wanita</strong>
-              <br>
-               JL. Pangeran Santri No.99, RT.001/RW.012,Kotakulon, 
-              <br>
-              Kec. Sumedang Selatan, Kab Sumedang, Jawa Barat
-              <br>
-            </p>
-          </div>
-          <div class="section-map" data-aos="fade-up" data-aos-easing="linear">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3054.5813387462913!2d107.91948579728285!3d-6.854370255863216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68d13d7f590c21%3A0xaf8f4e746dfa25a7!2sJl.%20Pangeran%20Santri%20No.99%2C%20Kotakulon%2C%20Kec.%20Sumedang%20Sel.%2C%20Kabupaten%20Sumedang%2C%20Jawa%20Barat%2045311!5e0!3m2!1sen!2sid!4v1701337264358!5m2!1sen!2sid" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-          </div>
-          <div class="space40px"></div>
-          <div class="has-text-centered" data-aos="fade-up" data-aos-easing="linear">
-            <a href="https://www.google.com/maps/dir//Jl.+Pangeran+Santri+No.99,+Kotakulon,+Sumedang+Regency,+West+Java/@-6.8543874,107.9180229,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x2e68d13d7f590c21:0xaf8f4e746dfa25a7!2m2!1d107.9205978!2d-6.8543874?hl=en&entry=ttu" class="button btn-cta" target="_blank" data-aos="zoom-in">
-              <i class="far fa-directions"></i>
-              &nbsp;&nbsp;Google Maps
-            </a>
-          </div>
-        </div>
-      </section>
-      <!-- End Lokasi Content -->
-
-      <!-- Begin rsvp -->
-      
-<section class="section-light regular-section is-fullheight" id="rsvp">
-  <div class="container">
-    <div class="columns is-multiline">  
-      <div class="column has-text-centered is-12 prolog">
-        <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">Konfirmasi Kehadiran</h1>
-        <div class="column is-12 prolog has-text-centered" data-aos="fade-up" data-aos-easing="linear">
-         <div class="custom-card">
-              <p class="h2 subtitle">
-                Merupakan suatu kehormatan dan kebahagiaan bagi kami
-                <br>
-                apabila Bapak/Ibu/Saudara/Saudari berkenan hadir
-                memberikan doa restu.
-                <br>
-                <br>
-                Jika bisa hadir kami tunggu konfirmasinya,
-                <br>
-                <br>
-                Jika tidak memungkinkan untuk hadir di pernikahan kami, tidak mengapa,
-                <br>
-                semoga bisa berjumpa di lain kesempatan
-                <br>
-                <br>
-                Stay safe & jaga kesehatan ya :)
-              </p>
-              <div class="space24px"></div>
-              <div data-aos="fade-up" data-aos-easing="linear">
-                <img src="image/divider-leaves.png" class="divider has-text-centered" alt="~~~">
-              </div>
-              <div class="space24px"></div>
-            </div>
-
-        <form class="rsvp-form" id="my-form">
-          <div class="field">
-            <label class="label">Nama</label>
-            <div class="control">
-              <input class="input" type="text" placeholder="Masukkan Nama" name="nama">
-            </div>
-          </div>
-
-          <div class="field">
-            <label class="label">Jumlah</label>
-            <div class="control">
-              <input class="input" type="number" placeholder="Masukkan Jumlah" name="jumlah" min="1" max="5" value="1">
-            </div>
-          </div>
-
-          <div class="field">
-            <label class="label">Konfirmasi</label>
-            <div class="control">
-              <div class="select">
-                <select name="status">
-                  <option selected>Pilih salah satu</option>
-                  <option value="Hadir">Hadir</option>
-                  <option value="Tidak Hadir">Tidak Hadir</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-          <div class="field">
-            <div class="control">
-              <button class="button is-rounded kirim" type="submit">Kirim</button>
-            </div>
-          </div>
-        </form>
-        
-          <div class="space40px"></div>
-
-      </div>
-    </div>
-  </div>
-</section>
-      <!-- End rsvp -->
-
-      <!-- Begin gift Content -->
-      <section class="section-dark" id="gift">
-        <div class="container">
-       
-          <div class="columns is-multiline">
-            <div class="column is-12 prolog">
-              <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">Kirim Hadiah</h1>
-              <div class="card">
-                <div class="card-content has-text-centered">
-                  <h1 class="title is-size-5">Sansan Yanuar Prawira Disastra</h1>
-                   <h1 class="subtitle is-size-5">BCA 7771893213</h1>
-                  <div class="buttons is-centered">
-                    <button class="button is-rounded" onclick="copyText('7771893213')">Copy No Rekening</button>
-                  </div>
-                    
-                       <h1 class="title is-size-5">Yeni Hernawati</h1>
-                         <h1 class="subtitle is-size-5">BCA 3790739417</h1>
-                         <div class="buttons is-centered"></div>
-                    <button class="button is-rounded" onclick="copyText('3790739417')">Copy No Rekening</button>
-                         </div>
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+	
+	<div class="welcome-section content-hidden">
+		<div class="content-wrap">
+			<ul class="fly-in-text">
+				<li>You're </li>
+				<li>Invited</li>
+			</ul>
+			<a href="#" 'id'='btnInv' class="enter-button" onclick="removeProperty()"><i aria-hidden="true" class="far fa-envelope-open"></i> Open Invitation</a>
+		</div>
+	</div>
+	
+	<!-- audio mp3 -->
+	<audio id="myAudio" autoplay="true" loop>
+		<source src="https://goodchoice-invitation.com/wp-content/uploads/2021/07/Kauai-45-Sweet-Cocoa-Just-the-Two-of-Us-Lyric-Video-AudioTrimmer.com_.mp3" type="audio/mp3">
+	</audio>
+	
+    <!-- Carousel Start -->
+    <!--<div class="container-fluid p-0 mb-4 pb-5" id="home">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">-->
+            <div class="carousel-inner">
+                <div class="carousel-item position-relative active" style="height: 100vh; min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="img/carousel-1.jpg" style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+							<img class="imgsavethedate" src="img/1-1.png" style="">
+                            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Imam & Gea</h1>
+                            <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
+                                <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">We're getting married</h3>
+								<h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">24 Februari 2024</h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-      
-              <div class="space40px"></div>
-              <div data-aos="fade-up" data-aos-easing="linear">
-                <img src="image/divider-leaves.png" class="divider has-text-centered" alt="~~~">
-              </div>
-              <div class="space40px"></div>
-              <p class="h2 subtitle has-text-centered" data-aos="fade-up" data-aos-easing="linear">
-                Kami yang berbahagia,
-                <br>
-                <a class="instagram" : href="https://instagram.com/sansan.yanuar" target="_blank" alt="Instagram Sansan">
-                  <i class="fab fa-instagram"></i> @sansan.yanuar
-                </a>
-                &nbsp
-                <a class="instagram" href="https://instagram.com/yenniherna_" target="_blank" alt="Instagram Yeni">
-                  <i class="fab fa-instagram"></i> @yenniherna_
-                </a>
-              </p>
+                <div class="carousel-item position-relative" style="height: 100vh; min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="img/carousel-2.jpg" style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+							<img class="imgsavethedate" src="img/1-1.png" style="">
+                            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Imam & Gea</h1>
+                            <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
+                                <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">We're getting married</h3>
+								<h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">24 Februari 2024</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-      
-      
-          </div>
-      
+            <!--<a class="carousel-control-prev justify-content-start" href="#header-carousel" data-slide="prev">
+                <div class="btn btn-primary px-0" style="width: 68px; height: 68px;">
+                    <span class="carousel-control-prev-icon mt-3"></span>
+                </div>
+            </a>
+            <a class="carousel-control-next justify-content-end" href="#header-carousel" data-slide="next">
+                <div class="btn btn-primary px-0" style="width: 68px; height: 68px;">
+                    <span class="carousel-control-next-icon mt-3"></span>
+                </div>
+            </a>
         </div>
+    </div>-->
+    <!-- Carousel End -->
+
+
+    <!-- Video Modal Start -->
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>        
+                    <!-- 16:9 aspect ratio -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
-      <!-- End gift Content -->
     </div>
-    <!-- End Main Content -->
+    <!-- Video Modal End -->
 
-    <!-- Begin Footer -->
-    <div class="footer">
-      <div class="container">
-          <p class="has-vertically-align">2023 &copy Sansan Yanuar Prawiradisastra</p>
-      </div>
+
+    <!-- About Start -->
+    <!--<div class="container-fluid py-3" id="about">
+        <div class="container py-3">
+            <div class="section-title position-relative text-center">
+                <i class="far fa-heart text-dark"></i>
+            </div>
+            <div class="row m-0 mb-4 mb-md-0 pb-2 pb-md-0">
+                <div class="col-md-6 p-0 text-center text-md-right">
+                    <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
+                        <h3 class="mb-3">The Groom</h3>
+                        <p>Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
+                        <h3 class="font-secondary font-weight-normal text-muted mb-3"><i class="fa fa-male text-primary pr-3"></i>Jack</h3>
+                        <div class="position-relative">
+                            <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 p-0" style="min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="img/about-1.jpg" style="object-fit: cover;">
+                </div>
+            </div>
+            <div class="row m-0">
+                <div class="col-md-6 p-0" style="min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="img/about-2.jpg" style="object-fit: cover;">
+                </div>
+                <div class="col-md-6 p-0 text-center text-md-left">
+                    <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
+                        <h3 class="mb-3">The Bride</h3>
+                        <p>Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
+                        <h3 class="font-secondary font-weight-normal text-muted mb-3"><i class="fa fa-female text-primary pr-3"></i>Rose</h3>
+                        <div class="position-relative">
+                            <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!-- About End -->
+	
+	<div id = "mydiv" class="position-relative text-center" style="margin-top: 50px; margin-bottom: 30px;">
+		<img class="img-fluid imgbismillah" src="img/bismillah.png">
+	</div>
+	
+	<div id = "mydiv" class="position-relative text-center container reveal" style="margin-top: 30px; margin-bottom: 30px;">
+		<div style="margin-top: 30px; margin-bottom: 30px;">
+		Assalamu'alaikum Warahmatullahi Wabarakatuh.
+		<br />
+		  Dengan memohon rahmat dan ridha Allah swt, 
+		  <br />
+		  kami bermaksud mengundang Bapak/Ibu/Saudara/Saudari pada acara pernikahan kami
+		<br />
+		</div>
+		<h3 class="font-secondary display-4 text-black-50">Imam Ramadhan</h3>
+		<h3 class="font-secondary display-4 text-black-50">&</h3>
+		<h3 class="font-secondary display-4 text-black-50">Gea Sukma Herlianindya</h3>
+	</div>	
+	
+	<div id = "mydiv" class="section-title position-relative text-center" style="margin-bottom: 10px;">
+	<i class="far fa-heart text-black "></i>
+	</div>
+	<div class="section-title position-relative text-center">
+		<h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">WE LOVE EACH OTHER</h6>
+		<section>
+		<div class="container reveal">
+			<h1 class="font-secondary display-4 text-black-50">Our Prayer</h1>
+			<div style="width:80%; margin-left: auto; margin-right: auto;">
+				<h5 class="text-black-50 textcenter">
+					" Dan di antara tanda-tanda kekuasaan-Nya diciptakan-Nya untukmu pasangan hidup dari jenismu sendiri supaya kamu dapat 
+					ketenangan hati dan dijadikannya kasih sayang di antara kamu. Sesungguhnya yang demikian menjadi tanda-tanda kebesaran-Nya 
+					bagi orang-orang yang berpikir. "<br></br>
+
+					- Q.S. Ar-Rum: 21 -
+				</h5>
+			</div>
+		</div>
+		</section>
+		<i class="far fa-heart text-black"></i>
+	</div>
+		
+    <!-- Gallery Start -->
+	
+    <div class="container-fluid bg-gallery" id="gallery" style="padding: 120px 0; margin: 60px 0;">
+        <div class="section-title position-relative text-center" style="margin-bottom: 120px;">
+            <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Gallery</h6>
+            <h1 class="font-secondary display-4 text-white">Our Photo Gallery</h1>
+            <i class="far fa-heart text-white"></i>
+        </div>
+        <div class="owl-carousel gallery-carousel">
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="img/gallery-1.jpg" alt="">
+                <a href="img/gallery-1.jpg" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-search text-white"></i>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="img/gallery-2.jpg" alt="">
+                <a href="img/gallery-2.jpg" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-search text-white"></i>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="img/gallery-3.jpg" alt="">
+                <a href="img/gallery-3.jpg" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-search text-white"></i>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="img/gallery-4.jpg" alt="">
+                <a href="img/gallery-4.jpg" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-search text-white"></i>
+                </a>
+            </div>
+        </div>
     </div>
-    <!-- End Footer -->
-
-    <!-- Scripts -->
-    
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        const form = document.getElementById('my-form');
-        form.addEventListener("submit", function(e) {
-          e.preventDefault();
-          const formData = new FormData(form);
-          const action = e.target.action;
-          fetch(action, {
-              method: 'POST',
-              body: formData,
-            })
-            .then(() => {
-              alert("Konfirmasi kehadiran berhasil terkirim!");
-            })
-            .catch(error => console.error('Error:', error));
-        });
-      });
-    </script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/menikah.js"></script>
-    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-    
-    <script>
-      AOS.init({
-        easing: "ease-out",
-        duration: 800,
-      });
-    </script>
-
-<script>
-  function copyText(text) {
-    navigator.clipboard.writeText(text).then(function() {
-      console.log('Text berhasil disalin: ' + text);
-    }).catch(function(err) {
-      console.error('Gagal menyalin teks: ', err);
-    });
-  }
-  
-</script>
-
-<script>
-  // Fungsi untuk memutar audio dan mengarahkan pengguna ke #regular-section
-  function playAudio() {
-    var audio = document.getElementById("audio");
-    audio.play();
-
-    // Mengatur kecepatan scroll dengan animasi
-    var targetSection = document.getElementById("regular-section");
-    var targetPosition = targetSection.offsetTop;
-    var currentPosition = window.scrollY;
-    var distance = targetPosition - currentPosition;
-    var duration = 2000; // Durasi animasi dalam milidetik (1 detik = 1000 milidetik)
-    var start = null;
-
-    function step(timestamp) {
-      if (!start) start = timestamp;
-      var progress = timestamp - start;
-      window.scrollTo(0, easeInOut(progress, currentPosition, distance, duration));
-
-      if (progress < duration) {
-        requestAnimationFrame(step);
-      }
-    }
-
-    // Fungsi untuk menggambarkan pola percepatan-easeInOut
-    function easeInOut(t, b, c, d) {
-      t /= d / 2;
-      if (t < 1) return c / 2 * t * t + b;
-      t--;
-      return -c / 2 * (t * (t - 2) - 1) + b;
-    }
-
-    requestAnimationFrame(step);
-    
-    
-  }
-</script>
+    <!-- Gallery End -->
 
 
+    <!-- Event Start -->
+    <div class="container-fluid" id="event">
+        <div class="container py-3">
+			<section>
+			<div class="container reveal">
+            <div class="section-title position-relative text-center">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Event</h6>
+                <h1 class="font-secondary display-4 text-black-50">Our Wedding Event</h1>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+            
+            <div class="row">
 
-<script>
-  // Fungsi untuk mendapatkan nilai parameter dari URL
-  function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
-  }
+                <div class="col-md-12">
+                    <div class="text-center text-md-center ml-md-3">
+						 <p class="mb-2">Sabtu, 24 Februari 2024</p>
+						 <p class="mb-0">08:30 - 11:00</p>
+                        <p class="mb-2">Jl. Mohammadtoha Gg. Cisereuh</p>
+						<p class="mb-0">Rt.10 Rw.03 Bandung</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+			</section>
+		</div>
+    </div>	
+	
+	 <div class="container-fluid py-3" id="location">
+        <div class="container py-3">
+			<div class="section-title position-relative text-center">
+                
+                <h1 class="font-secondary display-4 text-black-50">Locations</h1>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+			
+			<div class="justify-content-center">
+				<div class="section-map" data-aos="fade-up" data-aos-easing="linear">				     
+					<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3960.465917732094!2d107.60845487505563!3d-6.954237368084256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwNTcnMTUuMyJTIDEwN8KwMzYnMzkuNyJF!5e0!3m2!1sid!2sid!4v1705995022696!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+			</div>
+		</div>
+	</div>
 
-  // Mendapatkan nilai parameter 'text' dari URL
-  var textParam = getParameterByName('text');
+	<div class="position-relative text-center">
+		<img class="img-fluid mb-4" src="img/qrcode.png" width="30%" alt="">
+	</div>
+	
+	 <div class="container-fluid py-3" id="countdown">
+        <div class="container py-3">
+			<div class="section-title position-relative text-center">
+                <h1 class="font-secondary display-4 text-black-50">Countdown</h1>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+				<p id="demo"></p>
+		</div>
+	 </div>
+    <!-- Event End -->
+	
+	<!-- GIFT Start -->
 
-  // Memperbarui h1 jika parameter 'text' ditemukan
-  if (textParam) {
-    var dynamicH1 = document.getElementById('dynamic-h1');
-    dynamicH1.textContent = textParam;
-  }
-</script>
+    <div class="container-fluid py-5" id="gift">
+            <div class="section-title position-relative text-center">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">WEDDING GIFT</h6>
+                <h1 class="font-secondary display-4"><img class="img-fluid imggift" src="img/gift.png" alt=""></h1>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+            <!--<div class="row justify-content-center">
+                <div class="col-lg-8">
+					<div class="text-center">
+						<div class="row justify-content-center">
+						<div class="col-md-6 textcenter">
+							<img class="img-fluid imgbank" src="img/bank1.png" alt="">
+							<p><b>130-00-1557071-9</b>
+							<input type="text" value="130-00-1557071-9" id="bank1" class="textfieldbank">
+							<p><button class="btn btn-primary font-weight-bold py-1 px-1" onclick="copytoclipboard1()" id="textbank1" >Salin</button>
+							<p>An. Hesty Rahmawati
+						</div>
+						<div class="col-md-6 textcenter">
+							<img class="img-fluid imgbank" src="img/bank1.png" alt="">
+							<p><b>132-00-2536093-5</b>
+							<input type="text" value="132-00-2536093-5" id="bank2" class="textfieldbank">
+							<p><button class="btn btn-primary font-weight-bold py-1 px-1" onclick="copytoclipboard2()" id="textbank2" >Salin</button>
+							<p>An. Muhamad Rusli
+						</div>
+						</div>
+                    </div>
+                </div>
+            </div>-->
+			
+			 <div class="row justify-content-center">
+                <div class="col-lg-8">
+					<div class="text-center">
+						<div class="row justify-content-center">
+						<div class="col-md-12 textcenter">
+							<img class="img-fluid imgbank" src="img/bank2.png" alt="">
+							<p><b>055-0798-895</b>
+							<input type="text" value="0550798895" id="bank3" class="textfieldbank">
+							<p><button class="btn btn-primary font-weight-bold py-1 px-1" onclick="copytoclipboard3()" id="textbank3" >Salin</button>
+							<p>An. IMAM RAMADHAN
+						</div>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- GIFT End -->
+	
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white py-2" id="contact" style="margin-top: 60px; padding-top: 30px !important;">
+        <div class="container text-center py-2">
+            <div class="section-title position-relative text-center">
+                <h1 class="font-secondary display-3 text-white">Thank You</h1>
+                <i class="far fa-heart text-white"></i>
+            </div>
+            <!--<div class="d-flex justify-content-center mb-4">
+                <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
+            </div>-->
+			<div class="d-flex justify-content-center">
+				create by:
+            </div>
+			<div class="d-flex justify-content-center">
+				<img class="img-fluid imgicon" src="img/weddingstory.png" alt="">
+            </div>
+            <div class="d-flex justify-content-center py-2">
+                <p class="text-white" href="#">syamsuri.core@gmail.com</p>
+                <span class="px-3">|</span>
+                <p class="text-white" href="#">0878-7871-1423</p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
 
 
+    <!-- Scroll to Bottom -->
+    <i id="aa" class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
 
-  </body>
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-outline-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+	
+	<script>
+		function copytoclipboard1() {
+			// Get the text field
+			var copyText = document.getElementById("bank1");
+			var text1 = document.getElementById("textbank1");
+			var text2 = document.getElementById("textbank2");
+			var text3 = document.getElementById("textbank3");
+			
+			// Select the text field
+			copyText.select();
+			copyText.setSelectionRange(0, 99999); // For mobile devices
+
+			// Copy the text inside the text field
+			navigator.clipboard.writeText(copyText.value);
+			
+			text1.innerHTML = "Berhasil Disalin";
+			text2.innerHTML = "Salin";
+			text3.innerHTML = "Salin";
+		}
+		
+		function copytoclipboard2() {
+			// Get the text field
+			var copyText = document.getElementById("bank2");
+			var text1 = document.getElementById("textbank1");
+			var text2 = document.getElementById("textbank2");
+			var text3 = document.getElementById("textbank3");
+
+			// Select the text field
+			copyText.select();
+			copyText.setSelectionRange(0, 99999); // For mobile devices
+
+			// Copy the text inside the text field
+			navigator.clipboard.writeText(copyText.value);
+
+			text1.innerHTML = "Salin";
+			text2.innerHTML = "Berhasil Disalin";
+			text3.innerHTML = "Salin";
+		}
+		
+		function copytoclipboard3() {
+			// Get the text field
+			var copyText = document.getElementById("bank3");
+			var text1 = document.getElementById("textbank1");
+			var text2 = document.getElementById("textbank2");
+			var text3 = document.getElementById("textbank3");
+
+			// Select the text field
+			copyText.select();
+			copyText.setSelectionRange(0, 99999); // For mobile devices
+
+			// Copy the text inside the text field
+			navigator.clipboard.writeText(copyText.value);
+			
+			text1.innerHTML = "Salin";
+			text2.innerHTML = "Salin";
+			text3.innerHTML = "Berhasil Disalin";
+		}
+		
+		$("#aa").click(function() {
+			$('html, body').animate({
+				scrollTop: $("#mydiv").offset().top
+			}, 2000);
+		});
+
+
+		// Set the date we're counting down to
+		var countDownDate = new Date("February 24, 2024 08:30:00").getTime();
+		// Update the count down every 1 second
+		var x = setInterval(function() {
+
+		  // Get today's date and time
+		  var now = new Date().getTime();
+			
+		  // Find the distance between now and the count down date
+		  var distance = countDownDate - now;
+			
+		  // Time calculations for days, hours, minutes and seconds
+		  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+			
+		  // Output the result in an element with id="demo"
+		  document.getElementById("demo").innerHTML = 
+			"<div class='row text-center cardcustomparent font-secondary display-4'>"
+				+"<div class='card cardcustom'>"+ days + "<p>Hari </div>"
+				+"<div class='card cardcustom'>"+ hours + "<p>Jam </div>"
+				+"<div class='card cardcustom'>"+ minutes + "<p>Menit </div></div>";
+			
+		  // If the count down is over, write some text  1000
+		  if (distance < 0) {
+			clearInterval(x);
+			document.getElementById("demo").innerHTML = "EXPIRED";
+		  }
+		}, 1000);
+		
+		//removeScroll body
+        function removeProperty() {
+            element = document.querySelector('body');
+            element.style.setProperty('overflow', 'unset');
+			
+			var audio = document.getElementById("myAudio");
+			audio.play();
+        }
+		
+		//goToTopPage
+		window.onbeforeunload = function () {
+			window.scrollTo(0, 0);
+		}
+	</script>
+	
+	<script type="text/javascript">
+		//WELCOME
+		$(function() {
+			var welcomeSection = $('.welcome-section'),
+				enterButton = welcomeSection.find('.enter-button');
+			
+			setTimeout(function() {
+				welcomeSection.removeClass('content-hidden');
+			}, 500);
+			
+			enterButton.on('click', function(e) {
+				e.preventDefault();
+				welcomeSection.addClass('content-hidden').fadeOut();
+			});
+       })();
+	</script>
+	
+	<script type="text/javascript">
+		function reveal() {
+			var reveals = document.querySelectorAll(".reveal");
+
+			for (var i = 0; i < reveals.length; i++) {
+				var windowHeight = window.innerHeight;
+				var elementTop = reveals[i].getBoundingClientRect().top;
+				var elementVisible = 150;
+
+				if (elementTop < windowHeight - elementVisible) {
+					reveals[i].classList.add("active");
+				} else {
+					reveals[i].classList.remove("active");
+				}
+			}
+		}
+		window.addEventListener("scroll", reveal);
+	</script>
+</body>
+
 </html>
