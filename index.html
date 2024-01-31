@@ -43,7 +43,7 @@
 	
 	<!-- audio mp3 -->
 	<audio id="myAudio" autoplay="true" loop>
-		<source src="https://goodchoice-invitation.com/wp-content/uploads/2021/07/Kauai-45-Sweet-Cocoa-Just-the-Two-of-Us-Lyric-Video-AudioTrimmer.com_.mp3" type="audio/mp3">
+		<source src="https://wedding.goodchoice.id/wp-content/uploads/2023/11/fly-me-to-the-moon-lucky-sinatra-jason-mraz-and-colbie-caillat-mashup-rick-hale-and-breea-guttery.mp3" type="audio/mp3">
 	</audio>
 	
     <!-- Carousel Start -->
@@ -392,6 +392,10 @@
     <script src="js/main.js"></script>
 	
 	<script>
+		var queryString = window.location.search;
+		var urlParams = new URLSearchParams(queryString);
+		console.log(urlParams);
+ 
 		function copytoclipboard1() {
 			// Get the text field
 			var copyText = document.getElementById("bank1");
@@ -537,6 +541,33 @@
 		}
 		window.addEventListener("scroll", reveal);
 	</script>
+	
+	<!--FIREBASE-->
+	<script type="module">
+		// Import the functions you need from the SDKs you need
+		import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
+		import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-analytics.js";
+		// TODO: Add SDKs for Firebase products that you want to use
+		// https://firebase.google.com/docs/web/setup#available-libraries
+
+		// Your web app's Firebase configuration
+		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+		const firebaseConfig = {
+		apiKey: "AIzaSyAufY5JXxoMH6bwXLXTeiMFRvbrOuiUV3w",
+		authDomain: "wedding-ad8ad.firebaseapp.com",
+		databaseURL: "https://wedding-ad8ad-default-rtdb.asia-southeast1.firebasedatabase.app",
+		projectId: "wedding-ad8ad",
+		storageBucket: "wedding-ad8ad.appspot.com",
+		messagingSenderId: "1096985506082",
+		appId: "1:1096985506082:web:91cd852967419a084e757b",
+		measurementId: "G-Q5CWK7LPE1"
+		};
+
+		// Initialize Firebase
+		const app = initializeApp(firebaseConfig);
+		const analytics = getAnalytics(app);
+	</script>
+
 </body>
 
 </html>
