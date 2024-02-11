@@ -33,7 +33,7 @@
 	
 	<div class="welcome-section content-hidden">
 		<div class="content-wrap">
-		<ass class="enter-button text-uppercase text-primary mb-3 font-weight-bold"" style="letter-spacing: 2px">Untuk <span id="untukKepada" style="margin-left: 10px"></span></ass>
+		<ass class="enter-button text-uppercase text-primary mb-3 font-weight-bold"" style="letter-spacing: 2px"><span id="untukKepada" style="margin-left: 10px"></span></ass>
 			<ul class="fly-in-text font-secondary">
 				
 				<li>You're </li>
@@ -397,8 +397,10 @@
 	<script>
 		const params = new URLSearchParams(document.location.search);
 		const s = params.get("untuk");
-		document.getElementById("untukKepada").innerHTML = s;
-		console.log(s); 
+		if (s !== null){
+			document.getElementById("untukKepada").innerHTML = "Untuk " + s;
+			console.log(s); 
+		}
 		
 		function copytoclipboard1() {
 			// Get the text field
